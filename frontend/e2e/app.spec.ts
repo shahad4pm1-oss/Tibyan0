@@ -346,15 +346,13 @@ test("evaluation page: coverage, measured metrics only, LLM pending", async ({ p
   await shot(page, "11-evaluation");
 });
 
-test("sources page: integrated sources with hashes, pending sources with reasons", async ({ page }) => {
+test("sources page: integrated sources with hashes, no pending-sources list", async ({ page }) => {
   await page.goto("/sources");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("المصادر");
   for (const id of ["quran", "hadith:bukhari", "hadith:muslim"])
     await expect(page.locator(`[data-source-id='${id}']`)).toBeVisible();
   await expect(page.getByText(/^SHA-256 [0-9a-f]{64}$/).first()).toBeVisible();
-  await expect(page.locator("[data-pending-source]")).toHaveCount(7);
-  for (const n of ["موسوعة التفسير", "العقيدة", "الفقه", "السيرة والتاريخ", "بيّنات", "الجمهرة"])
-    await expect(page.locator(`[data-pending-source='${n}']`)).toBeVisible();
+  await expect(page.locator("[data-pending-source], #s-next")).toHaveCount(0);
   await noHorizontalScroll(page);
   await axe(page);
   await shot(page, "12-sources");
