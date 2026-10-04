@@ -1,0 +1,21 @@
+# Netlify (or compatible) static hosting for the Tibyan frontend. Base directory: frontend/
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # VITE_API_BASE_URL must be set in the Netlify UI to the backend's https origin, e.g. https://tibyan-api.onrender.com
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

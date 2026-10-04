@@ -1,0 +1,4 @@
+# Optional / later phases. Written but not runtime-verified in this environment.
+# sentence-transformers   # neural embedding adapter (app/services/embeddings.py); model weights
+#                         # could not be downloaded in the build environment
+# (No vendor SDK needed: the Anthropic adapter uses plain HTTP via httpx.)

@@ -1,0 +1,34 @@
+# Render blueprint for the Tibyan backend. Not deployed by the build agent (no hosting credentials).
+# Secrets (LLM_API_KEY) are NOT set here: add them in the Render dashboard as secret env vars when available.
+services:
+  - type: web
+    name: tibyan-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: https://tibyan.netlify.app   # replace with the real frontend origin (https only)
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "30"
+      - key: TRUST_PROXY_HEADERS
+        value: "true"                        # Render terminates TLS at its proxy; client IP is in X-Forwarded-For
+      - key: EMBEDDING_PROVIDER
+        value: local_lsa
+      - key: EMBEDDING_MODEL
+        value: char-ngram-lsa-v1
+      - key: HYBRID_STRATEGY
+        value: lexical_first
+      - key: LOG_RAW_INPUT
+        value: "false"
+      # LLM: leave unset to run in LLM_UNAVAILABLE mode. When a key exists:
+      # - key: LLM_PROVIDER
+      #   value: gemini                 # or anthropic
+      # - key: LLM_MODEL
+      #   value: <current model id>
+      # - key: LLM_API_KEY
+      #   sync: false                      # entered in the dashboard, never committed

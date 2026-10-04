@@ -1,0 +1,15 @@
+{
+  "_label": "SYNTHETIC NON-RELIGIOUS FIXTURE for testing the hadith importer. NOT a hadith collection.",
+  "source_id": "synth_collection",
+  "source_type": "synthetic_fixture",
+  "collection": "Synthetic Collection (test only)",
+  "title": "مجموعة اختبارية (ليست نصوصًا دينية)",
+  "author": null,
+  "edition": "test-fixture-1",
+  "publisher": "Tibyan test suite",
+  "source_url": null,
+  "license_note": "Written for tests by the Tibyan team.",
+  "verification_status": "APPROVED",
+  "acquired_at": "2026-10-01",
+  "grading_rule": "synthetic placeholder grading; not a real grading"
+}

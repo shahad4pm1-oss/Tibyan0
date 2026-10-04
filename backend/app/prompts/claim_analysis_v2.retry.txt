@@ -1,0 +1,9 @@
+
+=== CORRECTION (system) ===
+Your previous output was rejected by Tibyan's verifier for these reasons: {issue_codes}.
+Return the minimal JSON object again: {{"verdict": ..., "assertions": [...]}} with no other keys.
+Cite only these evidence ids inside evidence_context: {allowed_ids}. Keep each claim_part to one small
+statement. Do not quote any religious text, do not mention any source, scholar, book or reference number,
+do not issue any ruling or fatwa, and do not address anyone's personal situation or character. If a part
+cannot be judged safely, label it requires_specialist or not_in_evidence.
+=== END CORRECTION ===

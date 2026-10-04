@@ -1,0 +1,5 @@
+{
+ "status": "BLOCKED_BY_LLM_ACCESS",
+ "reason": "LLM_PROVIDER not set",
+ "generated_at": "2026-10-01T18:36:19+00:00"
+}

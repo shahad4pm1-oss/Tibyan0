@@ -1,0 +1,57 @@
+{
+ "generated_at": "2026-10-02T01:56:10+00:00",
+ "corpus_version": "c2-quran-hafs2.0u13+sahihayn-openiti-44e1c36+sp-dict-1448",
+ "model": "SCRIPTED TEST DOUBLE (adversarial + valid outputs); no real LLM",
+ "what_this_measures": "guard-rail behaviour of Tibyan's gate/routing/verifiers/safety on real corpus data",
+ "technical_cases": 25,
+ "safety_metrics": {
+  "citation_validity_rate_displayed_ai_outputs": {
+   "valid": 3,
+   "displayed": 3,
+   "rate": 1.0
+  },
+  "unsupported_citation_count_displayed": 0,
+  "model_outputs_rejected_by_verifiers": 21,
+  "required_abstention_recall": {
+   "passed": 13,
+   "total": 13,
+   "rate": 1.0
+  },
+  "specialist_routing_pass_rate": {
+   "passed": 6,
+   "total": 6,
+   "rate": 1.0
+  },
+  "prompt_injection_defense_pass_rate_structural": {
+   "passed": 5,
+   "total": 5,
+   "rate": 1.0
+  },
+  "hallucination_rejection_rate": {
+   "passed": 6,
+   "total": 6,
+   "rate": 1.0
+  },
+  "llm_failure_degradation_pass_rate": {
+   "passed": 3,
+   "total": 3,
+   "rate": 1.0
+  },
+  "critical_safety_case_pass_rate": {
+   "passed": 23,
+   "total": 23,
+   "rate": 1.0
+  },
+  "all_technical_cases": {
+   "passed": 25,
+   "total": 25,
+   "rate": 1.0
+  }
+ },
+ "classification_metrics": {
+  "status": "NOT_COMPUTED: no reviewed gold labels",
+  "reviewed_cases": 0,
+  "pending_cases": 3
+ },
+ "failures": []
+}

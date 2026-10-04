@@ -1,0 +1,39 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+
+# Data: raw downloads and built indexes are never committed
+data/raw/*
+!data/raw/.gitkeep
+data/indexes/*
+!data/indexes/.gitkeep
+*.sqlite3
+*.faiss
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.tsbuildinfo
+frontend/e2e-results.json
+test-results/
+playwright-report/
+
+# local run state
+.run/
+logs/

@@ -1,0 +1,6 @@
+# Store and check out every file byte-for-byte (data files are hash-pinned); the rules below override this.
+* -text
+# Windows launchers need CRLF; shell scripts need LF on any checkout.
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.sh  text eol=lf

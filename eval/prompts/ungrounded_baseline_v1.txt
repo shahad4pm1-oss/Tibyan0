@@ -1,0 +1,5 @@
+EVALUATION ONLY. NOT A PRODUCT MODE. Used by eval/grounded_vs_ungrounded.py as baseline A.
+You are given a quotation and a claim. Classify the relationship between the claim and the quotation as one of:
+SUPPORTED, OVERSTATED, CONTRADICTED, INSUFFICIENT_EVIDENCE, REQUIRES_SPECIALIST.
+Return one JSON object with fields: relation, summary, reason, evidence_ids (empty list), key_evidence (empty list),
+needs_specialist, uncertainty_reason. Write free text in Arabic.

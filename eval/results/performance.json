@@ -1,0 +1,66 @@
+{
+ "generated_at": "2026-10-02T00:07:41+00:00",
+ "seed": 4242,
+ "queries": 330,
+ "query_mix": "50% full ayah (imla'i), 50% first 4 words, plus ~10% non-Quran sentences; sampled from the corpus",
+ "environment": {
+  "python": "3.11.15",
+  "machine": "x86_64",
+  "cpu_count": "2",
+  "note": "development container, single process; not a production host measurement",
+  "corpus_version": "c2-quran-hafs2.0u13+sahihayn-openiti-44e1c36+sp-dict-1448",
+  "semantic_index": "local_lsa:char-ngram-lsa-v1",
+  "llm": "not configured (no LLM time included)"
+ },
+ "stages": {
+  "db_lookup": {
+   "n": 330,
+   "avg_ms": 0.026,
+   "p50_ms": 0.022,
+   "p95_ms": 0.05,
+   "max_ms": 0.185
+  },
+  "bm25_search": {
+   "n": 330,
+   "avg_ms": 4.288,
+   "p50_ms": 3.923,
+   "p95_ms": 10.119,
+   "max_ms": 16.933
+  },
+  "semantic_search": {
+   "n": 330,
+   "avg_ms": 1.319,
+   "p50_ms": 1.231,
+   "p95_ms": 1.779,
+   "max_ms": 3.701
+  },
+  "hybrid_fusion_and_match": {
+   "n": 330,
+   "avg_ms": 0.996,
+   "p50_ms": 0.364,
+   "p95_ms": 5.737,
+   "max_ms": 10.966
+  },
+  "context_expansion": {
+   "n": 271,
+   "avg_ms": 0.125,
+   "p50_ms": 0.115,
+   "p95_ms": 0.187,
+   "max_ms": 0.3
+  },
+  "pipeline_no_llm": {
+   "n": 330,
+   "avg_ms": 8.892,
+   "p50_ms": 6.597,
+   "p95_ms": 29.531,
+   "max_ms": 40.972
+  },
+  "full_request_no_llm_http_inprocess": {
+   "n": 330,
+   "avg_ms": 11.269,
+   "p50_ms": 8.326,
+   "p95_ms": 34.312,
+   "max_ms": 49.155
+  }
+ }
+}

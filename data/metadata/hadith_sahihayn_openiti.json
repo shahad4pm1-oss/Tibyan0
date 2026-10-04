@@ -1,0 +1,86 @@
+{
+  "dataset_id": "hadith_sahihayn_openiti_shamela",
+  "domain": "hadith",
+  "official_category": "الحديث النبوي — «الأحاديث الصحيحة من الصحيحين ... أو الطبعات المعتمدة لكتب السنة النبوية في المكتبة الشاملة shamela.ws» (Scientific Package p.3)",
+  "status": "APPROVED",
+  "acquisition": {
+    "acquired_at": "2026-10-02",
+    "distribution_path": "OpenITI (Open Islamicate Texts Initiative) corpus, GitHub repository OpenITI/0275AH. OpenITI converted these files from al-Maktaba al-Shamela (shamela.ws) book records; each file names its Shamela book id.",
+    "repository": "https://github.com/OpenITI/0275AH",
+    "repository_commit": "44e1c36738a2bf5c14dafa232a6ae1891e6171cd",
+    "repository_commit_date": "2025-11-28T08:56:53+00:00",
+    "route_used": "raw.githubusercontent.com at the pinned commit (scripts/fetch_hadith.py), after the same files were inspected in a sparse git clone of that commit",
+    "not_reachable_routes": [
+      "shamela.ws (blocked by the build environment's network policy: proxy 403)",
+      "dorar.net (blocked by the build environment's network policy: proxy 403)"
+    ],
+    "byte_comparison_with_shamela": "NOT DONE: shamela.ws is unreachable from the build environment, so the OpenITI files could not be compared with the live Shamela books."
+  },
+  "license": {
+    "openiti": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (OpenITI release record, Zenodo DOI 10.5281/zenodo.10007820; OpenITI Terms of Use https://openiti.org/docs/Terms%20of%20Use.html)",
+    "openiti_attribution": "OpenITI: a Machine-Readable Corpus of Islamicate Texts (Nigst, Romanov, Savant, et al.), https://github.com/OpenITI. Changes: OpenITI markup removed, see transformations.",
+    "third_party_editions": "OpenITI's terms state that third-party material remains subject to its own rights. The printed editions below (Dar Tawq al-Najat; Dar Ihya al-Turath al-Arabi) have not had their reuse terms verified by the Tibyan team.",
+    "reuse_status": "PERMITTED_NON_COMMERCIAL_WITH_ATTRIBUTION (OpenITI layer); edition rights NOT INDEPENDENTLY VERIFIED",
+    "redistribution": "Raw files and derived text are not committed to the Tibyan repository; they are fetched and built at build time."
+  },
+  "grading": {
+    "rule": "Scientific Package p.3: «الأحاديث الصحيحة من الصحيحين» — hadith of the two Sahih collections are accepted as authentic by the official package.",
+    "grading_authority": "SCIENTIFIC_PACKAGE_SAHIHAYN_RULE",
+    "grading_generated_by_model": false,
+    "scope_caveat": "The rule is applied to the numbered (musnad) entries of each collection only. Chapter titles (tarajim), the authors' introductions and editors' commentary are not ingested. A numbered entry's text can still contain a suspended report (mu'allaq) or a Companion's statement printed with it; the collection-level rule is not a separate judgement on such parts. No per-hadith grading was generated."
+  },
+  "transformations": [
+    "T1 OpenITI markup removed: page markers (PageVxxPyyy and '### | [ص: n]'), milestones (msNNNN), continuation markers ('~~'), paragraph markers ('# '), stray HTML tags",
+    "T2 paragraphs of one hadith joined with a single space; several narrations sharing one Muslim number joined with a newline",
+    "T3 whitespace collapsed; no letter, diacritic or punctuation inside the text changed",
+    "normalized_text (search only) = normalize_for_search(original_text), normalizer norm-v1"
+  ],
+  "collections": [
+    {
+      "source_id": "hadith:bukhari",
+      "collection": "bukhari",
+      "collection_ar": "صحيح البخاري",
+      "title": "الجامع المسند الصحيح المختصر من أمور رسول الله صلى الله عليه وسلم وسننه وأيامه = صحيح البخاري",
+      "author": "محمد بن إسماعيل أبو عبد الله البخاري الجعفي (ت 256هـ)",
+      "editor": "محمد زهير بن ناصر الناصر",
+      "edition": "دار طوق النجاة، الطبعة الأولى 1422هـ (مصورة عن السلطانية بإضافة ترقيم محمد فؤاد عبد الباقي)، 9 أجزاء",
+      "publisher": "دار طوق النجاة",
+      "numbering": "ترقيم محمد فؤاد عبد الباقي كما في طبعة طوق النجاة (1–7563)",
+      "shamela_book_id": 1681,
+      "source_url": "http://shamela.ws/index.php/book/1681",
+      "openiti_uri": "0256Bukhari.Sahih.Shamela0001681-ara1",
+      "file": {
+        "repo_path": "data/0256Bukhari/0256Bukhari.Sahih/0256Bukhari.Sahih.Shamela0001681-ara1",
+        "local_path": "data/raw/openiti/0256Bukhari.Sahih.Shamela0001681-ara1",
+        "url": "https://raw.githubusercontent.com/OpenITI/0275AH/44e1c36738a2bf5c14dafa232a6ae1891e6171cd/data/0256Bukhari/0256Bukhari.Sahih/0256Bukhari.Sahih.Shamela0001681-ara1",
+        "size_bytes": 6039255,
+        "sha256": "16f95173b9ea1927b577ff85dc7e2a8351b8287e4ea9863782c4c5fc87ac8132"
+      },
+      "parser": "bukhari",
+      "source_url_note": "as recorded in the OpenITI file header (031.LibURL)"
+    },
+    {
+      "source_id": "hadith:muslim",
+      "collection": "muslim",
+      "collection_ar": "صحيح مسلم",
+      "title": "صحيح مسلم (المسند الصحيح المختصر بنقل العدل عن العدل إلى رسول الله صلى الله عليه وسلم)",
+      "author": "مسلم بن الحجاج أبو الحسين القشيري النيسابوري (ت 261هـ)",
+      "editor": "محمد فؤاد عبد الباقي",
+      "edition": "دار إحياء التراث العربي، بيروت (د.ت)، 5 أجزاء",
+      "publisher": "دار إحياء التراث العربي",
+      "numbering": "ترقيم محمد فؤاد عبد الباقي (الرقم بين قوسين في الملف)؛ أحاديث كتاب الإيمان 1–99 غير مرقمة في هذا الملف فلم تُستورد",
+      "shamela_book_id": 1727,
+      "source_url": null,
+      "openiti_uri": "0261Muslim.Sahih.Shamela0001727-ara1",
+      "file": {
+        "repo_path": "data/0261Muslim/0261Muslim.Sahih/0261Muslim.Sahih.Shamela0001727-ara1.mARkdown",
+        "local_path": "data/raw/openiti/0261Muslim.Sahih.Shamela0001727-ara1.mARkdown",
+        "url": "https://raw.githubusercontent.com/OpenITI/0275AH/44e1c36738a2bf5c14dafa232a6ae1891e6171cd/data/0261Muslim/0261Muslim.Sahih/0261Muslim.Sahih.Shamela0001727-ara1.mARkdown",
+        "size_bytes": 4933663,
+        "sha256": "8126f063f53504b68d6e9e133cec049c10acf498c501f5f4897013efc1e56d9e"
+      },
+      "parser": "muslim",
+      "source_url_note": "the OpenITI file header records only LibURI Shamela_0001727 (no URL); no URL is constructed"
+    }
+  ]
+}

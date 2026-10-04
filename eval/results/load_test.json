@@ -1,0 +1,79 @@
+{
+ "generated_at": "2026-10-02T00:07:55+00:00",
+ "server": {
+  "workers": 1,
+  "search_mode": "HYBRID",
+  "llm_mode": "LLM_UNAVAILABLE",
+  "rate_limit": "disabled for this run",
+  "host": "development container (loopback)"
+ },
+ "rounds": [
+  {
+   "concurrency": 1,
+   "requests": 400,
+   "succeeded": 400,
+   "failed": 0,
+   "status_codes": {
+    "200": 400
+   },
+   "latency_ms": {
+    "avg": 8.9,
+    "p50": 8.0,
+    "p95": 15.6,
+    "max": 35.1
+   },
+   "throughput_rps": 111.7,
+   "rss_mb_after": 186.6
+  },
+  {
+   "concurrency": 10,
+   "requests": 400,
+   "succeeded": 400,
+   "failed": 0,
+   "status_codes": {
+    "200": 400
+   },
+   "latency_ms": {
+    "avg": 108.7,
+    "p50": 110.7,
+    "p95": 190.3,
+    "max": 253.8
+   },
+   "throughput_rps": 91.4,
+   "rss_mb_after": 194.2
+  },
+  {
+   "concurrency": 25,
+   "requests": 400,
+   "succeeded": 400,
+   "failed": 0,
+   "status_codes": {
+    "200": 400
+   },
+   "latency_ms": {
+    "avg": 338.0,
+    "p50": 335.5,
+    "p95": 602.0,
+    "max": 760.7
+   },
+   "throughput_rps": 73.2,
+   "rss_mb_after": 202.3
+  }
+ ],
+ "concurrency": 25,
+ "requests": 400,
+ "succeeded": 400,
+ "failed": 0,
+ "latency_ms": {
+  "avg": 338.0,
+  "p50": 335.5,
+  "p95": 602.0,
+  "max": 760.7
+ },
+ "throughput_rps": 73.2,
+ "rss_mb": {
+  "before": 186.3,
+  "after": 202.3
+ },
+ "note": "Single uvicorn worker; synchronous pipeline runs in the threadpool. Not a production-host capacity claim."
+}

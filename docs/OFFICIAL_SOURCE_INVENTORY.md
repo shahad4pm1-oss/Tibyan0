@@ -1,0 +1,39 @@
+# Official source inventory (2026-10-02)
+
+Authority: «المرجعية والحزمة العلمية والبيانات», version 1448/3/20, pages 3–4 and 8 (copy received 2026-10-02, SHA-256 `23d776c7…5a1cb9c7`).
+
+**Summary.** All accessible and legally reusable official sources were integrated; the others remain blocked. Not every official source is integrated.
+
+- **Integrated:** the Quran; Sahih al-Bukhari; Sahih Muslim (with documented gaps). Hadith status: **LIMITED_PRODUCTION**. Tafsir (al-Tabari via the Quran.com API, Tafsir Mujahid local files) is shown as a separate commentary layer; see `LICENSES.md` §1.3.
+- **Removed from the product (2026-10-04):** the 10 Official Scientific Package Sample Glossary terms.
+- **Not integrated:** Dorar Tafsir; Dorar Aqeedah; Dorar Fiqh; Dorar History; Dorar Hadith API verification; Bayyinat; the full Jamhara dictionary; general dawa.center content; general islamic-content.com content; other Sunnah collections; Quran translations.
+
+For the Sahihayn, religious authority and dataset provenance are recorded separately: the collections are approved by the package; the machine-readable files come from OpenITI; their cross-check against Shamela/Dorar is PENDING and printed-edition reuse is PENDING VERIFICATION.
+
+How each source was checked: the build environment's shell can only reach GitHub, PyPI and npm; every other host is refused by the network proxy (HTTP 403 on CONNECT). Official sites were therefore inspected read-only with a web-page reader (for APIs, downloads and terms only, never as a data channel: that reader summarises pages and cannot deliver verbatim text). No site was scraped, no access control was bypassed, and no text was taken from a model's memory.
+
+Status values: DISCOVERED, ACCESSIBLE, ACQUIRED, VALIDATED, INDEXED, PRODUCTION_ACTIVE, BLOCKED_BY_ACCESS, BLOCKED_BY_TERMS, BLOCKED_BY_FORMAT, PENDING_REVIEW.
+
+| # | Category | Official name | Official URL | Acquisition method | Format | Version / date | License / reuse | Attribution | Accessibility | Ingestion | Production | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Quran | KFGQPC Uthmanic Hafs (via Quranpedia) | qurancomplex.gov.sa; quranpedia.net | KFGQPC package via `quranpedia/quran-text` @ 87d7691a, SHA-256 pinned | ZIP / CSV | v2.0, update 13.0 | KFGQPC usage rights (in-app use) | KFGQPC, Quranpedia | ACCESSIBLE (GitHub route) | ACQUIRED, VALIDATED, INDEXED | **PRODUCTION_ACTIVE** | Unchanged since Phase 2: Quran text digest pinned and re-checked (`5634b860…c7c65a`) |
+| 2 | Quran translations | KFGQPC translations / quranpedia.net | quranpedia.net | — | — | — | — | — | BLOCKED_BY_ACCESS (quranpedia.net and qurancomplex.gov.sa refused by proxy) | not attempted beyond discovery | — | Out of the scope of this task; would be stored separately as `quran_translation` |
+| 3 | Hadith | Scientific source: **Sahih al-Bukhari** (approved by the package). Edition metadata in dataset: Tawq al-Najat 1422, ed. Zuhayr al-Nasir; Shamela book 1681 | shamela.ws (named by the package) | Distribution path: **OpenITI** `0256Bukhari.Sahih.Shamela0001681-ara1` @ OpenITI/0275AH 44e1c367, SHA-256 pinned (`scripts/fetch_hadith.py`) | OpenITI mARkdown | file of 2025-11-28 commit | OpenITI: CC BY-NC-SA 4.0. Printed-edition reuse: **PENDING VERIFICATION** | OpenITI; Shamela; edition | ACCESSIBLE (GitHub); shamela.ws BLOCKED_BY_ACCESS | ACQUIRED, VALIDATED, INDEXED (7,380 numbered records) | **LIMITED_PRODUCTION** | Cross-check against Shamela/Dorar: **PENDING**. 174 numbers not separate entries in the file; grading = package rule for the Sahihayn |
+| 4 | Hadith | Scientific source: **Sahih Muslim** (approved by the package). Edition metadata in dataset: Dar Ihya al-Turath, ed. M. Fuad Abd al-Baqi; Shamela book 1727 | shamela.ws | Distribution path: **OpenITI** `0261Muslim.Sahih.Shamela0001727-ara1` @ same commit, SHA-256 pinned | OpenITI mARkdown | same | same | same | same | ACQUIRED, VALIDATED, INDEXED (2,922 numbered + 192 unnumbered narrations) | **LIMITED_PRODUCTION** | Cross-check: **PENDING**. Narrations the file does not number are kept with `hadith_number = null` and cited by book and chapter (internal id); no number invented. 111 numbers absent |
+| 5 | Hadith verification | Dorar Hadith Encyclopedia | dorar.net/hadith | Documented search API `dorar.net/dorar_api.json?skey=` (article 389) | JSON (search results) | — | No bulk-reuse terms found | — | **BLOCKED_BY_ACCESS** (dorar.net refused by proxy) | none | — | A runtime verification adapter was not built: it could not be tested here, and the API is a search service, not a dataset |
+| 6 | Hadith (other Sunnah books) | Approved Shamela editions | shamela.ws | — | — | — | — | — | BLOCKED_BY_ACCESS (shamela.ws) | none | — | Package requires verified grading before activation; none activated |
+| 7 | Tafsir | Dorar Tafseer | dorar.net/tafseer | no API or dataset found | HTML | — | not documented for bulk reuse | — | **BLOCKED_BY_ACCESS** | none | — | Early-centuries tafsir works (also permitted by the package) exist in OpenITI but need a scholarly selection and verified ayah alignment: PENDING_REVIEW, not ingested |
+| 8 | Aqeedah | Dorar Aqeeda | dorar.net/aqeeda | no API or dataset found | HTML | — | not documented | — | **BLOCKED_BY_ACCESS** | none | — | |
+| 9 | Fiqh | Dorar Feqhia | dorar.net/feqhia | no API or dataset found | HTML | — | not documented | — | **BLOCKED_BY_ACCESS** | none | — | Madhhab books: selection is a specialist decision (PENDING_REVIEW) |
+| 10 | Seerah / history | Dorar History | dorar.net/history | no API or dataset found | HTML | — | not documented | — | **BLOCKED_BY_ACCESS** | none | — | |
+| 11 | Shubuhat / FAQ | بينات: أسئلة وأجوبة عن الإسلام (مركز أصول) | dawa.center/file/7937 | PDF download link `dawa.center/file/7937/download` | PDF | 1445هـ / 2024 | «جميع الحقوق محفوظة» (all rights reserved) | — | **BLOCKED_BY_ACCESS** (dawa.center refused by proxy); also **PENDING_REVIEW** for terms | none | — | Can be ingested if the file is supplied and in-app use is confirmed permissible |
+| 12 | Terminology | موسوعة الجمهرة — معجم المصطلحات (~14,837 terms, 90+ languages) | islamic-content.com/dictionary | no API, export or dataset found | HTML | — | «الاستفادة العلمية … في الاستخدام الشخصي غير التجاري»; redistribution not permitted | — | **BLOCKED_BY_ACCESS** and **BLOCKED_BY_TERMS** (bulk import) | none | — | |
+| 13 | Terminology | **Official Scientific Package Sample Glossary** («نماذج لقاموس المصطلحات الأساسية», package p.8) — sample terms, not the Jamhara dictionary | the Scientific Package itself | transcribed from the PDF text layer, verified by `scripts/verify_dictionary_extract.py` | PDF table | v1448/3/20 | official challenge material | the package | ACCESSIBLE (supplied file) | ACQUIRED, VALIDATED (records = 10, English) | **NOT USED** since 2026-10-04 | Removed from the product: not looked up, not shown, not listed as a source. The curated file and its ingestion step remain |
+| 14 | Da'wah content | المستودع الدعوي الرقمي | dawa.center | no API/dataset found | HTML / files | — | all rights reserved | — | **BLOCKED_BY_ACCESS** | none | — | |
+| 15 | Da'wah content | الجمهرة — المحتوى الإسلامي | islamic-content.com | no API/dataset found | HTML | — | personal non-commercial use | — | **BLOCKED_BY_ACCESS**, **BLOCKED_BY_TERMS** | none | — | |
+
+## What would unblock each source
+- Dorar (5, 7–10): network access from the build/run environment plus written reuse permission or an official export; or files supplied by the organisers.
+- Bayyinat (11): the PDF supplied directly, and confirmation that in-app use within the challenge is permitted.
+- Jamhara dictionary (12, 15): an official dataset/API or written permission for structured reuse.
+- Shamela (6) and other Sunnah books: grading data from an approved source before any activation.

@@ -1,0 +1,4 @@
+# Dev/test tools. Installed and verified on 2026-10-01.
+-r requirements.txt
+pytest==9.1.1
+ruff==0.16.9

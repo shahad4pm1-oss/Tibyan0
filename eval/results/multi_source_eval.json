@@ -1,0 +1,119 @@
+{
+ "generated_at": "2026-10-02T01:58:18+00:00",
+ "seed": 20261002,
+ "cases_per_category": 200,
+ "corpus_version": "c2-quran-hafs2.0u13+sahihayn-openiti-44e1c36+sp-dict-1448",
+ "case_source": "generated from the hadith corpus itself (seeded slices; substitutions from corpus vocabulary)",
+ "hadith_search_normalization": "hnorm-v1",
+ "hadith_retrieval_bm25": {
+  "partial_verbatim": {
+   "n": 200,
+   "recall@1": 0.705,
+   "recall@5": 0.865,
+   "mrr": 0.7748
+  },
+  "word_substitution": {
+   "n": 200,
+   "recall@1": 0.705,
+   "recall@5": 0.89,
+   "mrr": 0.7895
+  },
+  "word_deletion": {
+   "n": 200,
+   "recall@1": 0.69,
+   "recall@5": 0.89,
+   "mrr": 0.7811
+  },
+  "honorific_symbol": {
+   "n": 200,
+   "recall@1": 0.78,
+   "recall@5": 0.955,
+   "mrr": 0.8595
+  },
+  "honorific_omitted": {
+   "n": 200,
+   "recall@1": 0.795,
+   "recall@5": 0.985,
+   "mrr": 0.8797
+  }
+ },
+ "hadith_retrieval_production_ranking": {
+  "partial_verbatim": {
+   "n": 200,
+   "recall@1": 0.955,
+   "recall@5": 0.995,
+   "mrr": 0.9693
+  },
+  "word_substitution": {
+   "n": 200,
+   "recall@1": 0.705,
+   "recall@5": 0.89,
+   "mrr": 0.7887
+  },
+  "word_deletion": {
+   "n": 200,
+   "recall@1": 0.7,
+   "recall@5": 0.895,
+   "mrr": 0.7861
+  },
+  "honorific_symbol": {
+   "n": 200,
+   "recall@1": 0.995,
+   "recall@5": 1.0,
+   "mrr": 0.9975
+  },
+  "honorific_omitted": {
+   "n": 200,
+   "recall@1": 0.955,
+   "recall@5": 0.995,
+   "mrr": 0.9747
+  }
+ },
+ "hadith_matching_full_pipeline": {
+  "partial_verbatim": {
+   "correct_resolved": 130,
+   "resolved_to_quran_query_is_verbatim_ayah_text": 3,
+   "correct_ambiguous_repeated_text": 67
+  },
+  "word_substitution": {
+   "near_match_not_attributed_source_listed": 188,
+   "near_match_not_attributed_source_not_listed": 12
+  },
+  "word_deletion": {
+   "near_match_not_attributed_source_listed": 180,
+   "correct_resolved": 4,
+   "missed": 4,
+   "near_match_not_attributed_source_not_listed": 11,
+   "resolved_to_other_hadith_containing_query_verbatim": 1
+  },
+  "honorific_symbol": {
+   "correct_resolved": 161,
+   "correct_ambiguous_repeated_text": 39
+  },
+  "honorific_omitted": {
+   "near_match_not_attributed_source_listed": 27,
+   "correct_resolved": 139,
+   "correct_ambiguous_repeated_text": 34
+  }
+ },
+ "quran_cases_full_pipeline_by_resolved_source": {
+  "quran": 172,
+  "ambiguous_quran": 28
+ },
+ "not_found_synthetic_full_pipeline": {
+  "n": 30,
+  "status_counts": {
+   "NOT_FOUND": 30
+  }
+ },
+ "terminology_lookup": {
+  "queries": 30,
+  "correct": 30,
+  "false_hits_on_non_religious_sentences": 0
+ },
+ "not_measured": [
+  "tafsir, aqeedah, fiqh, history, dawah and shubuhat retrieval (sources not ingested)",
+  "real user hadith quotations, paraphrased hadith, grading questions",
+  "claim analysis on hadith (disabled)"
+ ]
+}

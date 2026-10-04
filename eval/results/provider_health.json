@@ -1,0 +1,10 @@
+{
+ "status": "OK",
+ "llm_provider": "gemini",
+ "llm_model": "gemma-4-26b-a4b-it",
+ "latency_ms": 1370.8,
+ "input_tokens": 21,
+ "output_tokens": 11,
+ "structured_output_parsed": true,
+ "checked_at": "2026-10-03T09:26:34+00:00"
+}

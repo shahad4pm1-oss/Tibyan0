@@ -1,0 +1,102 @@
+{
+  "dataset_id": "quran_kfgqpc_hafs_v2",
+  "source_id": "quran",
+  "domain": "quran",
+  "official_category": "القرآن الكريم — طبعة مجمع الملك فهد (Scientific Package p.3)",
+  "status": "APPROVED",
+  "title": "خط الرسم العثماني (رواية حفص) — بيانات المطورين",
+  "title_en": "Unicode Uthmanic Font (Hafs Narration) — developer data",
+  "publisher": "King Fahd Glorious Qur'an Printing Complex (مجمع الملك فهد لطباعة المصحف الشريف)",
+  "riwayah": "Hafs 'an 'Asim",
+  "edition": "UthmanicHafs_v2-0, data version 2.0 (2022-09-07), update 13.0; KFGQPC page created 2020-09-16, last modified 2023-09-19",
+  "publisher_page": "https://qurancomplex.gov.sa/quran-dev/",
+  "package": {
+    "filename": "UthmanicHafs_v2-0.zip",
+    "local_path": "data/raw/kfgqpc/UthmanicHafs_v2-0.zip",
+    "size_bytes": 10729285,
+    "sha256": "a7b0e5591945712ec5e4d6142938ae4d1e9b49bdc89dff06222789bfebdfd72c",
+    "md5": "cf6841aea5b1d1fd70d032b43ff08278",
+    "sha1": "36ea5ab0d7ea1702f17ff43f9b50924cccd77ebf",
+    "member_used": "UthmanicHafs_v2-0 data/hafsData_v2-0.csv",
+    "official_url": "https://download.qurancomplex.gov.sa/resources_dev/UthmanicHafs_v2-0.zip",
+    "acquisition_urls": [
+      "https://download.qurancomplex.gov.sa/resources_dev/UthmanicHafs_v2-0.zip",
+      "https://cdn.quran.ws/KFGQPC/resources/quran-dev/uthmanic-hafs/UthmanicHafs_v2-0.zip",
+      "https://raw.githubusercontent.com/quranpedia/quran-text/87d7691a0179dbb3cadbc2276581f0fdbbe476b1/sources/kfgqpc/UthmanicHafs_v2-0.zip"
+    ]
+  },
+  "acquisition": {
+    "acquired_at": "2026-10-01",
+    "distribution_path": "Quranpedia / Quran.ws GitHub repository quran-text (reachable as both github.com/quranpedia/quran-text and github.com/quran-ws/quran-text; both resolve to the same commit). Its LICENSE names Quran.ws as rights holder of its own work.",
+    "route_used": "https://raw.githubusercontent.com/quranpedia/quran-text/87d7691a0179dbb3cadbc2276581f0fdbbe476b1/sources/kfgqpc/UthmanicHafs_v2-0.zip (scripts/fetch_quran.py), after the same file was inspected in a git clone of that commit",
+    "repository_commit": "87d7691a0179dbb3cadbc2276581f0fdbbe476b1 (2026-09-13)",
+    "repository_states_file_is": "KFGQPC distribution, redistributed unmodified (quran-text NOTICE.md, 'What is not licensed here')",
+    "quranpedia_net_dump_used": false,
+    "quranpedia_net_dump_note": "No file from https://quranpedia.net/dumps/ was downloaded or used: quranpedia.net is blocked by the build environment's network policy. The dump version current on 2026-10-01 was 2026-09-30 (dump page); it is recorded only as the reference for Quranpedia's usage policy.",
+    "not_reachable_routes": [
+      "download.qurancomplex.gov.sa (geo-restricted, and blocked by sandbox policy)",
+      "cdn.quran.ws (blocked by sandbox policy)",
+      "quranpedia.net (blocked by sandbox policy)"
+    ]
+  },
+  "verification": {
+    "hash_checks": [
+      "sha256 a7b0e5591945712ec5e4d6142938ae4d1e9b49bdc89dff06222789bfebdfd72c computed on the acquired file (scripts/fetch_quran.py)",
+      "sha256 of acquired file equals quranpedia/quran-text data/manifest.json /sources/hafs/layout/sha256",
+      "sha256 equals quran-ws/kfgqpc-resources SHA256SUMS entry resources/quran-dev/uthmanic-hafs/UthmanicHafs_v2-0.zip (commit 925b9434)",
+      "md5 and sha1 equal the checksums KFGQPC published on its resource page (captured in quran-ws/kfgqpc-resources metadata.json, checksums.published, verified=true)"
+    ],
+    "structural_checks": "6,236 rows, 114 surahs, consecutive ayah numbering; see scripts/validate_corpus.py",
+    "text_review": "No human comparison against the printed mushaf has been done yet by the Tibyan team.",
+    "verified_by": "automated hash + structural checks, 2026-10-01"
+  },
+  "license_or_terms": {
+    "summary": "In-app use: permitted without attribution (Quranpedia dump policy; quran-text LICENSE waiver; KFGQPC usage rights permit websites and software). Republication of the data as a downloadable dataset/database: attribution required (see republication_attribution).",
+    "applicable_to_tibyan": "Tibyan uses the text inside its application (search index, API responses showing matched passages and context). The raw package and the built corpus database are NOT committed to the public repository (.gitignore) and are not offered for download. This is in-app use under all three layers. The KFGQPC font file is redistributed in frontend/public/fonts under KFGQPC's usage rights (software/websites).",
+    "layers": [
+      {
+        "layer": "Underlying Quran text and font",
+        "holder": "King Fahd Glorious Qur'an Printing Complex (KFGQPC)",
+        "terms": "KFGQPC usage rights (حقوق الاستخدام): free use in personal and individual work, government and private/national institutions, printing*, digital and media publishing, websites, software and similar, inside and outside Saudi Arabia. *Printing Qur'an copies inside the Kingdom and importing them for sale is governed by Royal Decrees 136/8 (1/2/1406H) and 9/B/46356 (28/9/1424H).",
+        "terms_source": "Reproduced in full, in Arabic and English, in the quran-text repository LICENSE (section 'THIRD-PARTY MATERIAL — KING FAHD GLORIOUS QUR'AN PRINTING COMPLEX'), commit 87d7691a; that notice states the Arabic version governs. Not read directly on qurancomplex.gov.sa (unreachable from the build environment).",
+        "scope_note": "The reproduced text enumerates Illustrator, PDF, image and TrueType font formats of Mushaf al-Madinah. The developer data package used here (CSV inside UthmanicHafs_v2-0.zip, which also contains the TTF font) is published on KFGQPC's developer page (qurancomplex.gov.sa/quran-dev/), whose captured page has no separate license tab."
+      },
+      {
+        "layer": "Distribution path: Quranpedia official data-dump policy",
+        "holder": "Quranpedia.net",
+        "policy_url": "https://quranpedia.net/dumps/LICENSE.md",
+        "policy_version": "2026-10-01",
+        "dumps_page_version": "2026-09-30",
+        "rule_in_app": "Use inside apps requires no attribution (dump page: 'Use inside apps requires no attribution.').",
+        "rule_republication": "Republishing this data, in full or in part, as a downloadable database requires crediting Quranpedia.net with a link and the version number (dump page wording).",
+        "other_conditions": "Provided without warranty; users are responsible for verification; distributors of copies are asked to keep them current (LICENSE.md, as read via a web-fetch summary on 2026-10-01; exact wording not captured verbatim).",
+        "applies_how": "Quranpedia's official reuse policy for data it distributes. Recorded as the primary reference for the Quranpedia distribution path. Strictly, the file used came from the Quranpedia/Quran.ws GitHub repository (next layer), not from a quranpedia.net dump; both policies give the same rule for Tibyan's use."
+      },
+      {
+        "layer": "Distribution path: quran-text repository licence (the route actually used)",
+        "holder": "Quran.ws",
+        "terms": "CC BY 4.0 for the repository's own work, with a standing waiver of attribution for use inside an application, website, service, API, tool, research work or product. Attribution required on republication (if a third party can obtain the data AS DATA from what you distribute). Third-party KFGQPC files keep KFGQPC's terms; the repository grants no rights in them.",
+        "terms_source": "quran-text LICENSE and NOTICE.md at commit 87d7691a, read verbatim 2026-10-01",
+        "pinned_files": {
+          "LICENSE_sha256": "21958de4bf6c4d249dc7c7ed3ec2bc028efc59ffd806041c11e3395c9edd7e20",
+          "NOTICE.md_sha256": "88ac99bfe795c9ef39879c5f76854a4e7146b4f106b0f79b5af8a45d32624eb7"
+        }
+      }
+    ],
+    "republication_attribution": {
+      "when": "Only if Tibyan ever publishes the Quran data itself as a downloadable dataset, bulk export, mirror, or a corpus-serving endpoint. Not the case now.",
+      "quranpedia": "Credit Quranpedia.net with a link (https://quranpedia.net) and the version number.",
+      "quran_ws": "quran-text by quran-ws — https://github.com/quran-ws/quran-text — CC BY 4.0 (state if modified).",
+      "kfgqpc": "State KFGQPC as the publisher of the text; KFGQPC terms continue to apply."
+    },
+    "status": "PERMITTED_FOR_IN_APP_USE",
+    "open_action": "Confirm KFGQPC usage rights on qurancomplex.gov.sa from a location where it is reachable."
+  },
+  "transformations": [
+    "original_text = publisher aya_text with ONLY the trailing separator (U+00A0, or U+0020 for 2:286) and the trailing ayah-number glyph removed. The glyph is a font-specific code point that renders as an unrelated ligature without the KFGQPC font; the ayah number is kept in structured fields. The full publisher string is stored verbatim in metadata_json.publisher_aya_text and validation proves exact reconstruction.",
+    "normalized_text = normalize_for_search(aya_text_emlaey). aya_text_emlaey is the publisher's own imla'i text 'used for search purpose' (read.me). Never displayed.",
+    "normalized_text_alt = normalize_for_search(original_text) (Uthmani rasm), search-only."
+  ],
+  "original_text_digest_pinned": "5634b860360409091a3cf0f7a77641d1b64a8d40d8ce43f873d8ded0bcc7c65a",
+  "original_text_digest_note": "sha256 over (id, original_text) of all Quran passages in rowid order, as built in Phase 2 (2026-10-01); checked by scripts/validate_corpus.py"
+}

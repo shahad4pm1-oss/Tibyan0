@@ -1,0 +1,146 @@
+{
+ "dataset_id": "scientific_package_sample_glossary_p8",
+ "source_id": "glossary:scientific-package-samples",
+ "title": "Official Scientific Package Sample Glossary — عينات المصطلحات في الحزمة العلمية (10 مصطلحات، ص 8)",
+ "publisher": "تحدي الذكاء الاصطناعي في خدمة المحتوى الإسلامي (الجهة المنظمة)",
+ "edition": "نسخة 1448/3/20، الصفحة 8 من 8",
+ "reference": "Scientific Reference / Data Package v1448/3/20, p.8 «نماذج لقاموس المصطلحات الأساسية»",
+ "package_file": {
+  "title_metadata": "المرجعية والحزمة العلمية والبيانات.docx",
+  "sha256": "23d776c729fcf68f9c33152a22f34edb4cd80efc7c2b7c15981aff7c5a1cb9c7",
+  "size_bytes": 344285,
+  "received": "2026-10-02, attached by the participant to the build session"
+ },
+ "status": "APPROVED",
+ "acquired_at": "2026-10-02",
+ "license_note": "Official challenge material supplied to participants for building solutions; used inside the application only.",
+ "extraction": {
+  "tool": "pdftotext (poppler) without -layout, page 8; bidi control marks removed; cell lines joined with a space",
+  "text_layer_defect": "The PDF text layer encodes every lam-alif ligature (لا لأ لإ لآ) as the reversed pair (ال أل إل آل), and places some commas before the preceding space. The glyphs drawn on the page are correct.",
+  "correction_rule": "term_ar / usage_note_ar are the text layer with ONLY these defects undone. scripts/verify_dictionary_extract.py checks, for every field, that re-applying the defect (lam-alif -> reversed pair) and removing whitespace and diacritics yields exactly the text layer with whitespace and diacritics removed; and, when the package PDF is available locally, that each text_layer string occurs in a fresh extraction."
+ },
+ "entries": [
+  {
+   "id": "glossary:sp:en:islam",
+   "term_ar": "الإسلام",
+   "language": "en",
+   "translation": "Islam",
+   "usage_note_ar": "دين الاستسلام لله بالتوحيد والانقياد له بالطاعة، ويشرح بحسب السياق ولا يختزل في معنى ثقافي عام.",
+   "text_layer": {
+    "term_ar": "اإلسالم",
+    "translation": "Islam",
+    "usage_note_ar": "دين االستسالم لله بالتوحيد واالنقياد له بالطاعة ،ويشرح بحسب السياق وال يختزل في معنى ثقافي عام."
+   }
+  },
+  {
+   "id": "glossary:sp:en:tawhid",
+   "term_ar": "التوحيد",
+   "language": "en",
+   "translation": "Tawhid / Oneness of God",
+   "usage_note_ar": "يفضل إبقاء المصطلح مع شرح معناه إفراد الله بالربوبية والألوهية ووصفه بما جاء الوحي به من أسمائه الحسنى؛ ولا يختزل في ترجمة قد توحي بمجرد الوحدانية العددية.",
+   "text_layer": {
+    "term_ar": "التوحيد",
+    "translation": "Tawhid / Oneness of God",
+    "usage_note_ar": "يفضل إبقاء المصطلح مع شرح معناه إفراد الله بالربوبية واأللوهية ووصفه بما جاء الوحي به من أسمائه الحسنى؛ وال يختزل في ترجمة قد توحي بمجرد الوحدانية العددية."
+   }
+  },
+  {
+   "id": "glossary:sp:en:ibadah",
+   "term_ar": "العبادة",
+   "language": "en",
+   "translation": "Worship",
+   "usage_note_ar": "تشمل أعمال القلب والقول والعمل التي يتقرب بها العبد إلى الله، ولا تحصر في الشعائر فقط.",
+   "text_layer": {
+    "term_ar": "العبادة",
+    "translation": "Worship",
+    "usage_note_ar": "تشمل أعمال القلب والقول والعمل التي يتقرب بها العبد إلى الله ،وال تحصر في الشعائر فقط."
+   }
+  },
+  {
+   "id": "glossary:sp:en:nubuwwah",
+   "term_ar": "النبوة",
+   "language": "en",
+   "translation": "Prophethood",
+   "usage_note_ar": "تستخدم للدلالة على اصطفاء الأنبياء بالوحي، مع التمييز بينها وبين القيادة الدينية البشرية.",
+   "text_layer": {
+    "term_ar": "النبوة",
+    "translation": "Prophethood",
+    "usage_note_ar": "تستخدم للداللة على اصطفاء األنبياء بالوحي ،مع التمييز بينها وبين القيادة الدينية البشرية."
+   }
+  },
+  {
+   "id": "glossary:sp:en:wahy",
+   "term_ar": "الوحي",
+   "language": "en",
+   "translation": "Revelation",
+   "usage_note_ar": "يشرح بوصفه ما أوحاه الله إلى أنبيائه، مع تجنب استعمالات فضفاضة قد توهم الإلهام الشخصي.",
+   "text_layer": {
+    "term_ar": "الوحي",
+    "translation": "Revelation",
+    "usage_note_ar": "يشرح بوصفه ما أوحاه الله إلى أنبيائه ،مع تجنب استعماالت فضفاضة قد توهم اإللهام الشخصي."
+   }
+  },
+  {
+   "id": "glossary:sp:en:sharia",
+   "term_ar": "الشريعة",
+   "language": "en",
+   "translation": "Sharia / Islamic law and guidance",
+   "usage_note_ar": "يشرح بحسب السياق، ولا يختزل في العقوبات أو القانون الجنائي.",
+   "text_layer": {
+    "term_ar": "الشريعة",
+    "translation": "Sharia / Islamic law and guidance",
+    "usage_note_ar": "يشرح بحسب السياق ،وال يختزل في العقوبات أو القانون الجنائي."
+   }
+  },
+  {
+   "id": "glossary:sp:en:hadith",
+   "term_ar": "الحديث",
+   "language": "en",
+   "translation": "Hadith",
+   "usage_note_ar": "ما نُقل عن النبي ﷺ من قول أو فعل أو تقرير ونحو ذلك، مع بيان درجة الثبوت عند الاستدلال.",
+   "text_layer": {
+    "term_ar": "الحديث",
+    "translation": "Hadith",
+    "usage_note_ar": "ما ُنقل عن النبي ﷺ من قول أو فعل أو تقرير ونحو ذلك ،مع بيان درجة الثبوت عند االستدالل."
+   }
+  },
+  {
+   "id": "glossary:sp:en:sunnah",
+   "term_ar": "السنة",
+   "language": "en",
+   "translation": "Sunnah",
+   "usage_note_ar": "هدي النبي ﷺ وطريقته، ويحدد المقصود بحسب السياق العلمي.",
+   "text_layer": {
+    "term_ar": "السنة",
+    "translation": "Sunnah",
+    "usage_note_ar": "هدي النبي ﷺ وطريقته ،ويحدد المقصود بحسب السياق العلمي."
+   }
+  },
+  {
+   "id": "glossary:sp:en:fatwa",
+   "term_ar": "الفتوى",
+   "language": "en",
+   "translation": "Fatwa",
+   "usage_note_ar": "جواب شرعي يصدره مؤهل في واقعة أو سؤال؛ ولا يساوى بالمعلومة العامة.",
+   "text_layer": {
+    "term_ar": "الفتوى",
+    "translation": "Fatwa",
+    "usage_note_ar": "جواب شرعي يصدره مؤهل في واقعة أو سؤال؛ وال يساوى بالمعلومة العامة."
+   }
+  },
+  {
+   "id": "glossary:sp:en:dawah",
+   "term_ar": "الدعوة",
+   "language": "en",
+   "translation": "Da‘wah / Invitation to Islam",
+   "usage_note_ar": "التعريف بالإسلام والدعوة إليه بالحكمة، ويختار المقابل بحسب السياق والجمهور.",
+   "text_layer": {
+    "term_ar": "الدعوة",
+    "translation": "Da‘wah / Invitation to Islam",
+    "usage_note_ar": "التعريف باإلسالم والدعوة إليه بالحكمة ،ويختار المقابل بحسب السياق والجمهور."
+   }
+  }
+ ],
+ "records": 10,
+ "scope_note": "SAMPLE TERMS printed in the official Scientific Package (p.8, «نماذج لقاموس المصطلحات الأساسية»). This is NOT the Jamhara dictionary (islamic-content.com/dictionary, ~14,837 terms), which is not integrated (blocked by access and terms)."
+}

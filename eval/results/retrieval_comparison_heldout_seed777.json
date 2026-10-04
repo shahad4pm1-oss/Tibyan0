@@ -1,0 +1,419 @@
+{
+ "generated_at": "2026-10-02T01:55:34+00:00",
+ "corpus_version": "c2-quran-hafs2.0u13+sahihayn-openiti-44e1c36+sp-dict-1448",
+ "embedding_model": "local_lsa:char-ngram-lsa-v1",
+ "rrf_k": 60,
+ "seed": 777,
+ "cases_total": 1400,
+ "case_source": "generated from real KFGQPC corpus by documented transformations; not human-written, not expert-reviewed",
+ "overall": {
+  "bm25_only": {
+   "n": 1400,
+   "recall@1": 0.9686,
+   "recall@5": 0.9964,
+   "mrr": 0.981
+  },
+  "semantic_only": {
+   "n": 1400,
+   "recall@1": 0.8386,
+   "recall@5": 0.9421,
+   "mrr": 0.8846
+  },
+  "hybrid_rrf": {
+   "n": 1400,
+   "recall@1": 0.9121,
+   "recall@5": 0.9836,
+   "mrr": 0.9432
+  },
+  "hybrid_rrf_exact_priority": {
+   "n": 1400,
+   "recall@1": 0.9436,
+   "recall@5": 0.9929,
+   "mrr": 0.964
+  },
+  "hybrid_lexical_first": {
+   "n": 1400,
+   "recall@1": 0.975,
+   "recall@5": 0.9993,
+   "mrr": 0.9854
+  }
+ },
+ "by_category": {
+  "exact_uthmani": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "exact_imlaei": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "partial": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.975,
+    "recall@5": 0.985,
+    "mrr": 0.9816
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.745,
+    "recall@5": 0.88,
+    "mrr": 0.8058
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.855,
+    "recall@5": 0.96,
+    "mrr": 0.9059
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "formatting": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.98,
+    "recall@5": 0.995,
+    "mrr": 0.9878
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.765,
+    "recall@5": 0.935,
+    "mrr": 0.8465
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.925,
+    "recall@5": 0.975,
+    "mrr": 0.9486
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "span": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.84,
+    "recall@5": 0.995,
+    "mrr": 0.9058
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.49,
+    "recall@5": 0.8,
+    "mrr": 0.6206
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.65,
+    "recall@5": 0.955,
+    "mrr": 0.7743
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.65,
+    "recall@5": 0.955,
+    "mrr": 0.7743
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.84,
+    "recall@5": 0.995,
+    "mrr": 0.9058
+   }
+  },
+  "word_substitution": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.99,
+    "recall@5": 1.0,
+    "mrr": 0.9942
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.92,
+    "recall@5": 0.99,
+    "mrr": 0.9524
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.965,
+    "recall@5": 0.995,
+    "mrr": 0.9797
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.965,
+    "recall@5": 0.995,
+    "mrr": 0.9797
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.99,
+    "recall@5": 1.0,
+    "mrr": 0.9942
+   }
+  },
+  "word_deletion": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.995,
+    "recall@5": 1.0,
+    "mrr": 0.9975
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.95,
+    "recall@5": 0.99,
+    "mrr": 0.9668
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.99,
+    "recall@5": 1.0,
+    "mrr": 0.9942
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.99,
+    "recall@5": 1.0,
+    "mrr": 0.9942
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.995,
+    "recall@5": 1.0,
+    "mrr": 0.9975
+   }
+  }
+ },
+ "quote_matching_status_counts_production": {
+  "exact_uthmani": {
+   "EXACT": 191,
+   "AMBIGUOUS": 9
+  },
+  "exact_imlaei": {
+   "EXACT": 195,
+   "AMBIGUOUS": 5
+  },
+  "partial": {
+   "PARTIAL": 185,
+   "AMBIGUOUS": 15
+  },
+  "formatting": {
+   "PARTIAL": 190,
+   "AMBIGUOUS": 10
+  },
+  "span": {
+   "PARTIAL": 199,
+   "AMBIGUOUS": 1
+  },
+  "word_substitution": {
+   "AMBIGUOUS": 200
+  },
+  "word_deletion": {
+   "AMBIGUOUS": 200
+  }
+ },
+ "quote_matching_outcomes_by_pool": {
+  "production_lexical_first": {
+   "exact_uthmani": {
+    "correct_resolved": 191,
+    "correct_ambiguous_repeated_text": 9
+   },
+   "exact_imlaei": {
+    "correct_resolved": 195,
+    "correct_ambiguous_repeated_text": 5
+   },
+   "partial": {
+    "correct_resolved": 185,
+    "correct_ambiguous_repeated_text": 15
+   },
+   "formatting": {
+    "correct_resolved": 190,
+    "correct_ambiguous_repeated_text": 10
+   },
+   "span": {
+    "correct_resolved": 199,
+    "correct_ambiguous_repeated_text": 1
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "hybrid_rrf": {
+   "exact_uthmani": {
+    "correct_resolved": 191,
+    "correct_ambiguous_repeated_text": 9
+   },
+   "exact_imlaei": {
+    "correct_resolved": 195,
+    "correct_ambiguous_repeated_text": 5
+   },
+   "partial": {
+    "correct_resolved": 185,
+    "correct_ambiguous_repeated_text": 15
+   },
+   "formatting": {
+    "correct_resolved": 190,
+    "correct_ambiguous_repeated_text": 10
+   },
+   "span": {
+    "correct_resolved": 199,
+    "correct_ambiguous_repeated_text": 1
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "bm25_only": {
+   "exact_uthmani": {
+    "correct_resolved": 191,
+    "correct_ambiguous_repeated_text": 9
+   },
+   "exact_imlaei": {
+    "correct_resolved": 195,
+    "correct_ambiguous_repeated_text": 5
+   },
+   "partial": {
+    "correct_resolved": 185,
+    "correct_ambiguous_repeated_text": 15
+   },
+   "formatting": {
+    "correct_resolved": 190,
+    "correct_ambiguous_repeated_text": 10
+   },
+   "span": {
+    "correct_resolved": 199,
+    "correct_ambiguous_repeated_text": 1
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "REFERENCE_experimental_paraphrase_on": {
+   "exact_uthmani": {
+    "correct_resolved": 191,
+    "correct_ambiguous_repeated_text": 9
+   },
+   "exact_imlaei": {
+    "correct_resolved": 195,
+    "correct_ambiguous_repeated_text": 5
+   },
+   "partial": {
+    "correct_resolved": 185,
+    "correct_ambiguous_repeated_text": 15
+   },
+   "formatting": {
+    "correct_resolved": 190,
+    "correct_ambiguous_repeated_text": 10
+   },
+   "span": {
+    "correct_resolved": 199,
+    "correct_ambiguous_repeated_text": 1
+   },
+   "word_substitution": {
+    "correct_resolved": 195,
+    "near_match_not_attributed_source_listed": 5
+   },
+   "word_deletion": {
+    "correct_resolved": 193,
+    "near_match_not_attributed_source_listed": 7
+   }
+  }
+ },
+ "paraphrase_mode_production": "disabled",
+ "not_found_synthetic": {
+  "n": 30,
+  "status_counts": {
+   "NOT_FOUND": 30
+  },
+  "false_positive_rate": 0.0
+ }
+}

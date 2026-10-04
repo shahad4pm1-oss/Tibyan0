@@ -1,0 +1,3 @@
+{"number": "1", "book": "كتاب السفر (اختباري)", "book_number": 1, "chapter": "باب القطار", "chapter_number": 1, "text": "رَكِبَ المُسَافِرُ القِطَارَ السَّرِيعَ مِنَ المَحَطَّةِ الشَّمَالِيَّةِ", "grading": "SYNTHETIC", "grading_source": "test fixture"}
+{"number": "2", "book": "كتاب السفر (اختباري)", "book_number": 1, "chapter": "باب الحافلة", "chapter_number": 2, "text": "انْتَظَرَتِ المُعَلِّمَةُ الحَافِلَةَ عِنْدَ الإِشَارَةِ الخَضْرَاءِ", "grading": "SYNTHETIC", "grading_source": "test fixture"}
+{"number": "3", "book": "كتاب الطعام (اختباري)", "book_number": 2, "chapter": "باب الخبز", "chapter_number": 1, "text": "خَبَزَ الخَبَّازُ أَرْغِفَةً سَاخِنَةً لِلجِيرَانِ فِي الفَجْرِ", "grading": "SYNTHETIC", "grading_source": "test fixture"}

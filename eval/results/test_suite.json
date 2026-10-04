@@ -1,0 +1,22 @@
+{
+ "generated_at": "2026-10-02T23:05:05+00:00",
+ "suites": {
+  "backend_pytest": {
+   "passed": 426,
+   "failed": 0,
+   "skipped": 1,
+   "summary": "426 passed, 1 skipped, 1 warning in 92.80s (0:01:32)"
+  },
+  "browser_e2e_playwright": {
+   "passed": 119,
+   "failed": 0,
+   "skipped": 16,
+   "started_at": "2026-10-02T22:58:32.122Z",
+   "projects": [
+    "desktop 1280x900",
+    "tablet 820x1180",
+    "mobile 390x844"
+   ]
+  }
+ }
+}

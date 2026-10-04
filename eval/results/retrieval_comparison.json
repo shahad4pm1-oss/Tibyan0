@@ -1,0 +1,414 @@
+{
+ "generated_at": "2026-10-02T01:56:02+00:00",
+ "corpus_version": "c2-quran-hafs2.0u13+sahihayn-openiti-44e1c36+sp-dict-1448",
+ "embedding_model": "local_lsa:char-ngram-lsa-v1",
+ "rrf_k": 60,
+ "seed": 20261001,
+ "cases_total": 1400,
+ "case_source": "generated from real KFGQPC corpus by documented transformations; not human-written, not expert-reviewed",
+ "overall": {
+  "bm25_only": {
+   "n": 1400,
+   "recall@1": 0.9607,
+   "recall@5": 0.9957,
+   "mrr": 0.9764
+  },
+  "semantic_only": {
+   "n": 1400,
+   "recall@1": 0.8336,
+   "recall@5": 0.9471,
+   "mrr": 0.8823
+  },
+  "hybrid_rrf": {
+   "n": 1400,
+   "recall@1": 0.9014,
+   "recall@5": 0.9814,
+   "mrr": 0.9378
+  },
+  "hybrid_rrf_exact_priority": {
+   "n": 1400,
+   "recall@1": 0.9293,
+   "recall@5": 0.9864,
+   "mrr": 0.9545
+  },
+  "hybrid_lexical_first": {
+   "n": 1400,
+   "recall@1": 0.9643,
+   "recall@5": 0.9957,
+   "mrr": 0.9784
+  }
+ },
+ "by_category": {
+  "exact_uthmani": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "exact_imlaei": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "partial": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.995,
+    "recall@5": 1.0,
+    "mrr": 0.996
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.79,
+    "recall@5": 0.94,
+    "mrr": 0.854
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.905,
+    "recall@5": 0.97,
+    "mrr": 0.9388
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "formatting": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.98,
+    "recall@5": 1.0,
+    "mrr": 0.99
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.79,
+    "recall@5": 0.96,
+    "mrr": 0.8616
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.9,
+    "recall@5": 0.995,
+    "mrr": 0.944
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+   }
+  },
+  "span": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.795,
+    "recall@5": 0.97,
+    "mrr": 0.8715
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.43,
+    "recall@5": 0.755,
+    "mrr": 0.5661
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.6,
+    "recall@5": 0.905,
+    "mrr": 0.733
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.6,
+    "recall@5": 0.905,
+    "mrr": 0.733
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.795,
+    "recall@5": 0.97,
+    "mrr": 0.8715
+   }
+  },
+  "word_substitution": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.985,
+    "recall@5": 1.0,
+    "mrr": 0.9925
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.935,
+    "recall@5": 0.99,
+    "mrr": 0.9621
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.965,
+    "recall@5": 1.0,
+    "mrr": 0.9825
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.965,
+    "recall@5": 1.0,
+    "mrr": 0.9825
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.985,
+    "recall@5": 1.0,
+    "mrr": 0.9925
+   }
+  },
+  "word_deletion": {
+   "bm25_only": {
+    "n": 200,
+    "recall@1": 0.97,
+    "recall@5": 1.0,
+    "mrr": 0.985
+   },
+   "semantic_only": {
+    "n": 200,
+    "recall@1": 0.89,
+    "recall@5": 0.985,
+    "mrr": 0.9321
+   },
+   "hybrid_rrf": {
+    "n": 200,
+    "recall@1": 0.94,
+    "recall@5": 1.0,
+    "mrr": 0.9663
+   },
+   "hybrid_rrf_exact_priority": {
+    "n": 200,
+    "recall@1": 0.94,
+    "recall@5": 1.0,
+    "mrr": 0.9663
+   },
+   "hybrid_lexical_first": {
+    "n": 200,
+    "recall@1": 0.97,
+    "recall@5": 1.0,
+    "mrr": 0.985
+   }
+  }
+ },
+ "quote_matching_status_counts_production": {
+  "exact_uthmani": {
+   "EXACT": 193,
+   "AMBIGUOUS": 7
+  },
+  "exact_imlaei": {
+   "EXACT": 194,
+   "AMBIGUOUS": 6
+  },
+  "partial": {
+   "PARTIAL": 187,
+   "AMBIGUOUS": 13
+  },
+  "formatting": {
+   "PARTIAL": 193,
+   "AMBIGUOUS": 7
+  },
+  "span": {
+   "PARTIAL": 200
+  },
+  "word_substitution": {
+   "AMBIGUOUS": 200
+  },
+  "word_deletion": {
+   "AMBIGUOUS": 200
+  }
+ },
+ "quote_matching_outcomes_by_pool": {
+  "production_lexical_first": {
+   "exact_uthmani": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "exact_imlaei": {
+    "correct_resolved": 194,
+    "correct_ambiguous_repeated_text": 6
+   },
+   "partial": {
+    "correct_resolved": 187,
+    "correct_ambiguous_repeated_text": 13
+   },
+   "formatting": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "span": {
+    "correct_resolved": 200
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "hybrid_rrf": {
+   "exact_uthmani": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "exact_imlaei": {
+    "correct_resolved": 194,
+    "correct_ambiguous_repeated_text": 6
+   },
+   "partial": {
+    "correct_resolved": 187,
+    "correct_ambiguous_repeated_text": 13
+   },
+   "formatting": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "span": {
+    "correct_resolved": 200
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "bm25_only": {
+   "exact_uthmani": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "exact_imlaei": {
+    "correct_resolved": 194,
+    "correct_ambiguous_repeated_text": 6
+   },
+   "partial": {
+    "correct_resolved": 187,
+    "correct_ambiguous_repeated_text": 13
+   },
+   "formatting": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "span": {
+    "correct_resolved": 200
+   },
+   "word_substitution": {
+    "near_match_not_attributed_source_listed": 200
+   },
+   "word_deletion": {
+    "near_match_not_attributed_source_listed": 200
+   }
+  },
+  "REFERENCE_experimental_paraphrase_on": {
+   "exact_uthmani": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "exact_imlaei": {
+    "correct_resolved": 194,
+    "correct_ambiguous_repeated_text": 6
+   },
+   "partial": {
+    "correct_resolved": 187,
+    "correct_ambiguous_repeated_text": 13
+   },
+   "formatting": {
+    "correct_resolved": 193,
+    "correct_ambiguous_repeated_text": 7
+   },
+   "span": {
+    "correct_resolved": 200
+   },
+   "word_substitution": {
+    "correct_resolved": 193,
+    "near_match_not_attributed_source_listed": 7
+   },
+   "word_deletion": {
+    "correct_resolved": 194,
+    "near_match_not_attributed_source_listed": 6
+   }
+  }
+ },
+ "paraphrase_mode_production": "disabled",
+ "not_found_synthetic": {
+  "n": 30,
+  "status_counts": {
+   "NOT_FOUND": 30
+  },
+  "false_positive_rate": 0.0
+ }
+}
