@@ -13,6 +13,7 @@ import { useHealth } from "../health";
 import { navigate } from "../nav";
 import { checkInput, MAX, type FieldErrors } from "../input";
 import ImageVerify from "../ocr/ImageVerify";
+import { IMAGE_MODE_ENABLED } from "../features";
 
 type Mode = "text" | "image";
 
@@ -178,18 +179,22 @@ export default function Home() {
               <p>{mode === "text" ? "الصق النص كما وصلك، واكتب ما قيل إنه يدل عليه." : "اختر لقطة شاشة للنص، وراجع ما يُستخرج منها قبل التحقق."}</p>
             </div>
 
-            <div className="input-tabs" role="tablist" aria-label="طريقة إدخال الاقتباس" onKeyDown={onTabKey}>
-              <button type="button" role="tab" id="tab-text" aria-selected={mode === "text"} aria-controls="panel-text"
-                tabIndex={mode === "text" ? 0 : -1} onClick={() => selectMode("text")}>
-                <Type {...ICON} size={17} />نص
-              </button>
-              <button type="button" role="tab" id="tab-image" aria-selected={mode === "image"} aria-controls="panel-image"
-                tabIndex={mode === "image" ? 0 : -1} onClick={() => selectMode("image")}>
-                <ImageIcon {...ICON} size={17} />صورة
-              </button>
-            </div>
+            {IMAGE_MODE_ENABLED && (
+              <div className="input-tabs" role="tablist" aria-label="طريقة إدخال الاقتباس" onKeyDown={onTabKey}>
+                <button type="button" role="tab" id="tab-text" aria-selected={mode === "text"} aria-controls="panel-text"
+                  tabIndex={mode === "text" ? 0 : -1} onClick={() => selectMode("text")}>
+                  <Type {...ICON} size={17} />نص
+                </button>
+                <button type="button" role="tab" id="tab-image" aria-selected={mode === "image"} aria-controls="panel-image"
+                  tabIndex={mode === "image" ? 0 : -1} onClick={() => selectMode("image")}>
+                  <ImageIcon {...ICON} size={17} />صورة
+                </button>
+              </div>
+            )}
 
-            <div role="tabpanel" id="panel-text" aria-labelledby="tab-text" hidden={mode !== "text"}>
+            {/* with a single input method there are no tabs, so the form is a plain block, not a tab panel */}
+            <div id="panel-text" hidden={mode !== "text"}
+              {...(IMAGE_MODE_ENABLED ? { role: "tabpanel", "aria-labelledby": "tab-text" } : {})}>
               <form className="form" onSubmit={onSubmit} noValidate aria-describedby="form-note" aria-label="التحقق من نص">
                 <div className="field">
                   <label htmlFor="quote">الاقتباس</label>
@@ -241,9 +246,11 @@ export default function Home() {
               </form>
             </div>
 
-            <div role="tabpanel" id="panel-image" aria-labelledby="tab-image" hidden={mode !== "image"}>
-              <ImageVerify busy={busy} onVerify={verifyFromImage} onTypeInstead={() => selectMode("text", true)} />
-            </div>
+            {IMAGE_MODE_ENABLED && (
+              <div role="tabpanel" id="panel-image" aria-labelledby="tab-image" hidden={mode !== "image"}>
+                <ImageVerify busy={busy} onVerify={verifyFromImage} onTypeInstead={() => selectMode("text", true)} />
+              </div>
+            )}
           </div>
 
           <div ref={resultRef} tabIndex={-1} className="result-anchor" aria-live="polite" aria-busy={busy}>

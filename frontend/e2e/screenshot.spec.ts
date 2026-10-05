@@ -103,6 +103,24 @@ const arabicKey = (s: string) => s.replace(/[ً-ْٰـ]/g, "").replace(/[أإآ�
 
 // ---------------------------------------------------------------- input method
 
+// Keep in sync with frontend/src/features.ts. While the «صورة» tab is hidden, only the "absent" check runs.
+const IMAGE_MODE_ENABLED = false;
+
+test("image input is hidden: no «صورة» tab, no image panel, typed input works", async ({ page }) => {
+  test.skip(IMAGE_MODE_ENABLED, "the image tab is enabled; its own tests below cover it");
+  await page.goto("/");
+  await expect(page.locator("#tab-image, #panel-image, [role='tablist']")).toHaveCount(0);
+  await expect(page.getByText("صورة", { exact: true })).toHaveCount(0);
+  await expect(page.locator("#quote")).toBeVisible();
+  await page.goto("/methodology");
+  await expect(page.getByText("التحقق من صورة")).toHaveCount(0);
+});
+
+test.beforeEach(({}, info) => {
+  test.skip(!IMAGE_MODE_ENABLED && !info.title.startsWith("image input is hidden"),
+    "the «صورة» tab is hidden (frontend/src/features.ts: IMAGE_MODE_ENABLED = false)");
+});
+
 test("input tabs: text is the default, image tab is keyboard reachable, panels switch", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("tab", { name: "نص" })).toHaveAttribute("aria-selected", "true");
